@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="https://img.freepik.com/premium-vector/cyberpunk-style-sun-futuristic-background-80s-new-retro-wave-trend-vector-illustration_172533-900.jpg">
+  <script>
+    function sent() {
+      alert("All your info has been stolen 😎")
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Jonathan Baek's Page</title>
+</head>
+
+<body class="bg">
+  <div>
+    <header>
+      <h1 id="heading">Jonathan Baek</h1>
+      <!--These links are literally useless cause I didnt write enough content mb people-->
+      <div class="button">
+        <a href="#about"><span>About Me</span></a>
+        <a href="#code"><span>Coding Journey</span></a>
+        <a href="#contact"><span>Contact Me</span></a>
+      </div>
+    </header><br>
+    <main class="grid">
+      <div class="grid-item">
+        <h1 class="titles">Welcome to my page</h1>
+        <p>Hello, my name is Jonathan Baek, and this page will give you a current glimpse at me and my journey through coding. The first part of my website, "About Me", will be explaining the a general overview of my life that led me to here, as well as more about my personal life to get to know me better. The second part, the section titled "My Coding Journey", is how I got started with coding/software development, what I think of Correlation One, and my path so far. <img id="image1" src="https://cdn.discordapp.com/attachments/810747985402789918/1139667928392929351/image.png"/> </p>
+      </div>
+      <div id="about" class="grid-item">
+        <h2 class="titles">About me</h2>
+        <p>I was born in the Puget Sound area and have lived here all my life. I'm currently 24 and was previously studying Psychology at the University of Washington, but due to some complications, I ended up not pursuing that field. I then started working at Amazon and have been working here for around 2 years now, and because of that, I was provided the opportunity to enroll in the Correlation One program. Things I enjoy doing outside of work include watching anime/reading manga, going for walks, playing occasional video games, and trying out other new hobbies. My latest hobby that I have indulged in is custom keyboards, which I enjoy very much. </p> <br>
+      </div>
+      <div id="code" class="grid-item">
+        <h2 class="titles">My Coding Journey</h2>
+        <h3>08/04/2023</h3>
+        <p>Correlation One is actually the start of my coding career! Difficult to say as it's only the beginning of the road still, but I'm currently enjoying the course immensely. The teaching style and pace are right up my alley, alongside the content that it delivers. I didn't want to start this journey alone, so I invited a few coworkers/friends to join me along this journey to a both a better career path and new experience. </p>
+        <h3>08/11/2023</h3>
+            <p>Throughout my time so far in Correlation One, I feel as though I have learned a lot and applied those skills well into my projects. The class certainly provides enough of a challenge that I have to evaluate my options carefully, but is not impossible to the point where it feels like a insurmountable obstacle. I hope to learn more new tools I can use in my future work, as well as meet more intruiging people along the way. </p>
+      </div>
+    </main>
+    <div id="contact">
+      <footer>
+        <h1 class="titles">Contact me</h1>
+        <form action="">
+          <input type="text" id="fname" name="firstname" placeholder="Your name..."> <br>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..."><br>
+          <input type="text" id="email" name="Email" placeholder="example@email.com"><br>
+          <button type="submit" onclick="sent()">Send Message</button>
+        </form>
+        <a target="_blank" class="linkedin" href="https://www.linkedin.com/in/jonathanjbaek"><img class="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" alt="linked_in_logo"> </a>
+      </footer>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
